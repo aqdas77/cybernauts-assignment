@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+       function getData(){
+         const data = JSON.parse(localStorage.getItem("userData"));
+         const name = data.firstName+" "+data.lastName;
+         const email = data.email;
+         const username = data.userName;
+         document.getElementById('name').innerText += name;
+         document.getElementById('email').innerText += email;
+         document.getElementById('username').innerText += username;
+         document.getElementById('logout-btn').addEventListener("click",()=>{
+            window.location.href = "/";
+         })
+       }
+    </script>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body onload="getData()">
+    <div class="container">
+        <div class="details">
+            <h1>Details</h1>
+            <h3 id="name">Name :</h3>
+            <h3 id="email">Email :</h3>
+            <h3 id="username">Username :</h3>
+            <div class="logout">
+                <button id="logout-btn">LOG OUT</button>
+            </div>
+        </div>
+       
+    </div>
+</body>
+</html>

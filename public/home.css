@@ -1,0 +1,25 @@
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction : column;
+}
+.logout{
+    display: flex;
+    flex-direction : row-reverse;
+    padding : 2px;
+}
+
+#logout-btn{
+    padding: 8px 16px;
+    border : 2px solid #5832dc;
+    border-radius : 4px;
+    background-color: white;
+    color : #5832dc;
+    
+}
+#logout-btn:hover{
+    cursor : pointer;
+    background-color: #5832dc;
+    color : white;
+}
